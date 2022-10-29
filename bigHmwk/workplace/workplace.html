@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>输液系统主界面 Workplace</title>
+        <link rel="stylesheet" type="text/css" href="./workplace.css">
+        <script src="https://unpkg.com/vue@next"></script>
+    </head>
+    <body id="background">
+        <div id="maincontents">
+            <div id="ring">
+                <div id="ring">欢迎，护士XXX</div>
+            </div>
+            <div id="queue">
+                <div class="dropdown" id="infuse">
+                    等待穿刺的房间
+                    <div class="dropdown-absolute">
+                        <span >301</span>
+                        <span >302</span>
+                        <span >303</span>
+                    </div>
+                </div>
+                <div class="dropdown" id="Change">
+                    等待换药的房间
+                    <div class="dropdown-absolute">
+                        <span >301</span>
+                        <span >302</span>
+                        <span >303</span>
+                    </div>
+                </div>
+                <div class="dropdown" id="defuse">
+                    等待巡视的房间
+                    <div class="dropdown-absolute">
+                        <span >301</span>
+                        <span >302</span>
+                        <span >303</span>
+                    </div>
+                </div>
+                <div class="dropdown" id="infuse">
+                    等待拔针的房间
+                    <div class="dropdown-absolute">
+                        <span >301</span>
+                        <span >302</span>
+                        <span >303</span>
+                    </div>
+                </div>
+            </div>
+            <div id="fucshell">
+                <button>穿刺</button>
+                <button>换瓶</button>
+                <button>巡视</button>
+                <button>拔针</button>
+            </div>
+            <div id="mailbox">消息提醒</div>
+        </div>
+        
+    </body>
+</html>
