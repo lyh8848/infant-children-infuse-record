@@ -9,7 +9,9 @@
     <body id="background">
         <div id="maincontents">
             <div id="publicUI">
-                <button id="rreturn">返回</button>
+                <button id="rreturn">
+                    <a href="../">返回</a>
+                </button>
                 <div id="hint">
                     张三，您好！<br />
                     正在浏览：穿刺<br />
@@ -18,6 +20,7 @@
                 </div>
             </div>
             <div id="differUI">
+                <a href="templateUI/">cd templateUI</a>
                 <div class="Bed" id="bed1">
                     <div style="font-size: 20px;">1号床</div>
                     <div style="font-size: 30px;">21:26</div>
@@ -39,3 +42,70 @@
         </div>
     </body>
 </html>
+
+<style>
+    *{
+    margin:0;
+    padding: 0;
+    border: 0;
+}
+
+#background{
+    background-color: #99CFEB;
+    float: right;
+    background-size: auto;
+    width: auto;
+    min-height: 480px;
+    min-width: 768px;
+    font-family: "Microsoft YaHei", "SimHei", "Apple LiGothic Medium";
+}
+
+#maincontents{
+    border:2px solid #4095E5;
+    position: absolute;
+    width: 320px;
+    height: 720px;
+    left: 50%;
+    margin-left: -160px;
+    display: grid;
+    grid-template-rows: [topline] 100px [upwork] 620px [downline];
+}
+#publicUI{
+    display: grid;
+    grid-template-columns: auto auto;
+    border-bottom: 4px solid #BBBBBB;
+}
+#rreturn{
+    width: 120px;
+    text-align: center;
+    font-size: 15px;
+    border: 20px solid #99CFEB;
+    background-color: #999999;
+}
+#hint{
+    width: 200px;
+    padding-top: 9px;
+    text-align:left;
+    vertical-align: middle;
+}
+
+#differUI{
+    overflow-y: scroll;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+#differUI .Bed{
+    margin: 35px;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    background-color: #CECECE;
+}
+
+#differUI #bed1, #differUI #bed4, #differUI #bed6{
+    background-color: #B4FDFF;
+}
+
+</style>

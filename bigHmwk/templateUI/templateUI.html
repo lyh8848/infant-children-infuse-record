@@ -9,7 +9,9 @@
     <body id="background">
         <div id="maincontents">
             <div id="publicUI">
-                <button id="rreturn">返回</button>
+                <button id="rreturn">
+                    <a href="../">返回</a>
+                </button>
                 <button id="hint">ALARM</button>
             </div>
             <div id="differUI">
@@ -17,8 +19,84 @@
                 <button id="scan">扫码</button>
                 <div id="sptLine" style="width: 320px; height:2px; background-color:#EBBD00;"></div>
                 <button id="confirm">确定</button>
-                <button id="abnormal">异常反馈</button>
+                <form method="post" action="abnormal/">
+                    {% csrf_token %}
+                <button id="abnormal" type="submit">异常反馈</button>
+                </form>
             </div>
         </div>
     </body>
 </html>
+
+<style>
+    *{
+    margin:0;
+    padding: 0;
+    border: 0;
+}
+
+#background{
+    background-color: #99CFEB;
+    float: right;
+    background-size: auto;
+    width: auto;
+    min-height: 480px;
+    min-width: 768px;
+    font-family: "Microsoft YaHei", "SimHei", "Apple LiGothic Medium";
+}
+
+#maincontents{
+    border:2px solid #4095E5;
+    position: absolute;
+    width: 320px;
+    height: 720px;
+    left: 50%;
+    margin-left: -160px;
+    display: grid;
+    grid-template-rows: [topline] 100px [upwork] 620px [downline];
+}
+#publicUI{
+    display: grid;
+    grid-template-columns: auto auto;
+    border-bottom: 4px solid #BBBBBB;
+}
+#rreturn{
+    width: 120px;
+    text-align: center;
+    font-size: 15px;
+    border: 20px solid #99CFEB;
+    background-color: #999999;
+}
+#hint{
+    width: 76px;
+    margin: 10px 40px 10px 84px;
+    text-align:center;
+    background-color: red;
+}
+
+#differUI{
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+}
+
+#info{
+    height: 280px;
+    margin:20px;
+    background-color: white;
+}
+#scan{
+    margin: 20px 30px 20px 30px;
+    background-color: aqua;
+    height: 56px;
+}
+#confirm{
+    margin: 20px 30px 20px 30px;
+    background-color: #C5EE7E;
+    height: 56px;
+}
+#abnormal{
+    margin: 20px 30px 20px 30px;
+    background-color: #EBBD00;
+    height: 56px;
+}
+</style>
