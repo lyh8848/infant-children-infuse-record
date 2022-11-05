@@ -9,7 +9,7 @@
     <body id="background">
         <div id="maincontents">
             <div id="ring">
-                <div id="ring">欢迎，护士XXX</div>
+                <div id="ring">欢迎，护士{{userid}}</div>
             </div>
             <div id="queue">
                 <div class="dropdown" id="infuse">
@@ -48,10 +48,10 @@
             <div id="fucshell">
                 <form method="post" action="selectRoom/">
                     {% csrf_token %}
-                <button type="submit">穿刺</button>
-                <button type="submit">换瓶</button>
-                <button type="submit">巡视</button>
-                <button type="submit">拔针</button>
+                <button type="submit" name="cc" value="穿刺">穿刺</button>
+                <button type="submit" name="cc" value="换瓶">换瓶</button>
+                <button type="submit" name="cc" value="巡视">巡视</button>
+                <button type="submit" name="cc" value="拔针">拔针</button>
                 </form>
             </div>
             <div id="mailbox">消息提醒</div>

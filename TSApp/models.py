@@ -12,5 +12,8 @@ class SickInfo(models.Model):
     vein=models.CharField(max_length=1)    #vein choice
     needle=models.CharField(max_length=1)  #needle choice
 
+    class Meta:
+        db_table="p_info"
+
 
 # Create your models here.
