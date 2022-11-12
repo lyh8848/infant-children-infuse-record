@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>任务队列 Task Queue</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'bigHwmk/taskQueue.css' %}">
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body id="background">
+    {% csrf_token %}
+    <div id="maincontents">
+        <div id="publicUI">
+            <button id="rreturn">
+                <a href="../">返回</a>
+            </button>
+            <div id="hint">
+                {{userid}}，您好！<br />
+                正在浏览：{{opt}}<br />
+                等待病房数：5<br />
+                等待患者数：15
+            </div>
+        </div>
+
+        <div id="differUI">
+            {% for task in timeSeriesOfTask %}
+            <div id="testItem{{ forloop.counter }}" style="background-color:#4095e5">Somebody SomeRoom SomeBed Something Time</div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

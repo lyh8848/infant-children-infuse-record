@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+}
+
+#background{
+    background-color: #99CFEB;
+    float: right;
+    background-size: auto;
+    width: auto;
+    min-height: 480px;
+    min-width: 768px;
+    font-family: "Microsoft YaHei", "SimHei", "Apple LiGothic Medium";
+}
+
+#maincontents{
+    position: absolute;
+    width: 320px;
+    height: 720px;
+    left: 50%;
+    margin-left: -160px;
+    display: grid;
+    grid-template-rows: [topline] 100px [upqrcode] 320px [upinput] 150px [upbtn] 150px [downline];
+}
+
+#text{
+    position: relative;
+    text-align: center;
+    top: 50%;
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+#qrcode{
+    margin:40px;
+    background-color: white;
+}
+
+.inputzone{
+    margin-top: 17px;
+    margin-bottom: 40px;
+    font-weight: bolder;
+}
+
+#userid{
+    width: 210px;
+    height:30px;
+}
+#psword{
+    width: 210px;
+    height:30px;
+}
+
+#btnshell{
+    margin: 50px;
+}
+button{
+    width: 220px;
+    height: 50px;
+}

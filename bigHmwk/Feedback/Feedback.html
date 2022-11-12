@@ -3,11 +3,13 @@
     <head>
         <meta charset="utf-8">
         <title>请核对信息并进行操作 Workplace</title>
-        <link rel="stylesheet" type="text/css" href="./Feedback.css">
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'bigHwmk/Feedback.css' %}">
         <script src="https://unpkg.com/vue@next"></script>
     </head>
     <body id="background">
         <div id="maincontents">
+            <button id="killAProcess" name="kill">停止输液</button>
             <div id="inputShell">
                 <input value="异常类型" type="text">
                 <input value="药物类型">
@@ -25,55 +27,3 @@
         </div>
     </body>
 </html>
-
-<style>
-    *{
-    margin:0;
-    padding: 0;
-    border: 0;
-}
-
-#background{
-    background-color: #99CFEB;
-    float: right;
-    background-size: auto;
-    width: auto;
-    min-height: 480px;
-    min-width: 768px;
-    font-family: "Microsoft YaHei", "SimHei", "Apple LiGothic Medium";
-}
-
-#maincontents{
-    border:2px solid #4095E5;
-    background-color: #99CFEB;
-    position: absolute;
-    width: 320px;
-    height: 720px;
-    left: 50%;
-    margin-left: -160px;
-    display: grid;
-    grid-template-rows:3fr 1fr;
-    grid-template-columns: 1fr 1fr;
-}
-
-#maincontents input{
-    border:10px solid #99CFEB;
-    background-color: white;
-    color: gray;
-    font-size: 10px;
-}
-
-#inputShell{
-    grid-area: 1/1/span 1/span 2;
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-}
-#confirm{
-    margin:40px 25px;
-    background-color: #4095E5;
-}
-#ret{
-    margin:40px 25px;
-    background-color: grey;
-}
-</style>

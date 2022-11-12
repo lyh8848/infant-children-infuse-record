@@ -2,69 +2,10 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>输液系统登录 Infuse System Login</title>
-        <link rel="stylesheet" type="text/css" href="./login.css">
-        <style>
-            * {
-                margin: 0;
-            }
-            
-            #background{
-                background-color: #99CFEB;
-                float: right;
-                background-size: auto;
-                width: auto;
-                min-height: 480px;
-                min-width: 768px;
-                font-family: "Microsoft YaHei", "SimHei", "Apple LiGothic Medium";
-            }
-            
-            #maincontents{
-                position: absolute;
-                width: 320px;
-                height: 720px;
-                left: 50%;
-                margin-left: -160px;
-                display: grid;
-                grid-template-rows: [topline] 100px [upqrcode] 320px [upinput] 150px [upbtn] 150px [downline];
-            }
-            
-            #text{
-                position: relative;
-                text-align: center;
-                top: 50%;
-                font-size: 40px;
-                font-weight: bolder;
-            }
-            
-            #qrcode{
-                margin:40px;
-                background-color: white;
-            }
-            
-            .inputzone{
-                margin-top: 17px;
-                margin-bottom: 40px;
-                font-weight: bolder;
-            }
-            
-            #userid{
-                width: 210px;
-                height:30px;
-            }
-            #psword{
-                width: 210px;
-                height:30px;
-            }
-            
-            #btnshell{
-                margin: 50px;
-            }
-            button{
-                width: 220px;
-                height: 50px;
-            }
-            </style> -->
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'bigHwmk/login.css' %}">
         <script src="https://unpkg.com/vue@next"></script>
     </head>
     <body id="background">
@@ -74,14 +15,8 @@
             <form method="post" action="./workplace/">
                 {% csrf_token %}
             <div id="inputshell">
-                <div class="inputzone">
-                    <label for="userid">账号：</label>
-                    <input type="text" name="userid">
-                </div>
-                <div class="inputzone">
-                    <label for="psword">密码：</label>
-                    <input type="password" name="psword">
-                </div>
+                <input id="userid" class="inputzone" name="userid" type="text" placeholder="账号">
+                <input id="psword" class="inputzone" name="psword" type="password" placeholder="密码">
             </div>
             
             <div id="btnshell" type="submit">

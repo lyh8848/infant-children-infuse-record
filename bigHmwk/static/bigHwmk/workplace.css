@@ -1,0 +1,106 @@
+*{
+    margin:0;
+    border: 0;
+    padding: 0;
+}
+
+#background{
+    background-color: #99CFEB;
+    float: right;
+    background-size: auto;
+    width: auto;
+    min-height: 480px;
+    min-width: 768px;
+    font-family: "Microsoft YaHei", "SimHei", "Apple LiGothic Medium";
+}
+
+#maincontents{
+    border:2px solid #4095E5;
+    border-radius: 15px;
+    position: absolute;
+    width: 320px;
+    height: 720px;
+    left: 50%;
+    margin-left: -160px;
+    display: grid;
+    grid-template-columns: [leftline] 160px [centerline] 160px [rightline];
+    grid-template-rows: [topline] 100px [upwork] 470px [upmsg] 75px [upqueue] 75px [downline];
+}
+
+#ring{
+    text-align: center;
+    font-size: 40px;
+    font-weight: bolder;
+    grid-area: topline/leftline/upwork/rightline;
+}
+
+.bubble{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 0;
+
+    align-items: center;
+    border-radius: 15px;
+}
+#redBubble{
+    right: 0;
+}
+#logout{
+    left: 0;
+}
+
+
+#queue{
+    grid-area:upwork/leftline/upmsg/middleline;
+    width: 160px;
+    display:grid;
+    grid-template-rows: 1/1/1/1;
+    background-color: #4095E5;
+}
+.dropdown{
+    width: 160px;
+    height:60px;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    line-height: 60px;
+}
+.dropdown-absolute{
+    width: 160px;
+    height: 40px;
+    display: none;
+    position: absolute;
+}
+.dropdown:hover .dropdown-absolute{
+    display: block;
+}
+
+#fucshell{
+    grid-area: upwork/centerline/upmsg/rightline;
+    width: 160px;
+    display: grid;
+    font-size: 20px;
+    border-radius: 30px;
+    align-items: center;
+    text-align: center;
+    background-color: lightblue;
+}
+
+#publicIssue{
+    grid-area: upmsg/leftline/upqueue/rightline;
+    text-align: center;
+    align-items: center;
+    font-size: large;
+    border-radius: 15px;
+    background-color: black;
+    color: wheat;
+}
+
+#mailbox{
+    grid-area: upqueue/leftline/downline/rightline;
+    text-align: center;
+    border-radius: 15px;
+    font-size: 40px;
+    background-color: white;
+}

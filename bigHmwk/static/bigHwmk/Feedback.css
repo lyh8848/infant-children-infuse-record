@@ -1,0 +1,62 @@
+*{
+    margin:0;
+    padding: 0;
+    border: 0;
+}
+
+#background{
+    background-color: #99CFEB;
+    float: right;
+    background-size: auto;
+    width: auto;
+    min-height: 480px;
+    min-width: 768px;
+    font-family: "Microsoft YaHei", "SimHei", "Apple LiGothic Medium";
+}
+
+#killAProcess{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 96px;
+    height: 60px;
+    background-color: #fdd100;
+    grid-area: 1/2/2/3;
+    border-radius: 12px;
+}
+
+#maincontents{
+    border:2px solid #4095E5;
+    background-color: #99CFEB;
+    position: absolute;
+    width: 320px;
+    height: 720px;
+    left: 50%;
+    margin-left: -160px;
+    display: grid;
+    grid-template-rows: 1fr 9fr 3fr;
+    grid-template-columns:  1fr 1fr;
+}
+
+#maincontents input{
+    border:10px solid #99CFEB;
+    background-color: white;
+    color: gray;
+    font-size: 10px;
+}
+
+#inputShell{
+    grid-area: 2/1/span 1/span 2;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+#confirm{
+    grid-area: 3/1/4/2;
+    margin:40px 25px;
+    background-color: #4095E5;
+}
+#ret{
+    grid-area: 3/2/4/3;
+    margin:40px 25px;
+    background-color: grey;
+}
