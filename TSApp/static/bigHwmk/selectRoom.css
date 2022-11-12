@@ -1,0 +1,80 @@
+*{
+    margin:0;
+    padding: 0;
+    border: 0;
+}
+
+#background{
+    background-color: #99CFEB;
+    float: right;
+    background-size: auto;
+    width: auto;
+    min-height: 480px;
+    min-width: 768px;
+    font-family: "Microsoft YaHei", "SimHei", "Apple LiGothic Medium";
+}
+
+#maincontents{
+    border:2px solid #4095E5;
+    position: absolute;
+    width: 320px;
+    height: 720px;
+    left: 50%;
+    margin-left: -160px;
+    display: grid;
+    grid-template-rows: [topline] 100px [upwork] 620px [downline];
+}
+#publicUI{
+    display: grid;
+    grid-template-columns: auto auto;
+    border-bottom: 4px solid #BBBBBB;
+}
+#rreturn{
+    width: 120px;
+    text-align: center;
+    font-size: 15px;
+    border: 20px solid #99CFEB;
+    background-color: #999999;
+}
+#hint{
+    width: 200px;
+    padding-top: 9px;
+    text-align:left;
+    vertical-align: middle;
+}
+#backHome{
+    width: 44px;
+    height: 44px;
+    border-radius: 4px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#differUI{
+    overflow-y: scroll;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+}
+
+#differUI .Room{
+    margin: 34px 26px 34px 26px;
+    line-height: 44px;
+    text-align: center;
+}
+#room1{
+    background-color: #BD3124;
+}
+#room2{
+    background-color: #E99D42;
+}
+#room3{
+    background-color: #FEFA83;
+}
+#room4{
+    background-color: #FEFA83;
+}
+#room5{
+    background-color: #A2EF4D;
+}
